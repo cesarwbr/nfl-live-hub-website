@@ -15,12 +15,12 @@ export default function Hero() {
   const socialLinks = [
     {
       name: "X",
-      href: "https://x.com/home",
+      href: "https://x.com/NFLLiveHub",
       icon: <FaXTwitter size={24} />,
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/nfllivehub",
       icon: <FaInstagram size={24} />,
     },
   ];
@@ -153,7 +153,7 @@ export default function Hero() {
                 // Silently ignore email send errors for UX; user still lands on confirmation
               }
               router.push(
-                `/email-confirmation?email=${encodeURIComponent(email)}`
+                `/email-confirmation?email=${encodeURIComponent(email)}`,
               );
             }}
           >

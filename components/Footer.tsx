@@ -37,12 +37,12 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "X",
-      href: "https://x.com/home",
+      href: "https://x.com/NFLLiveHub",
       icon: <FaXTwitter />,
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/nfllivehub",
       icon: <FaInstagram />,
     },
   ];
