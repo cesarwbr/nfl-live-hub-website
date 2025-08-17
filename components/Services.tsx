@@ -395,7 +395,7 @@ export default function Services() {
                       self.activation_limit = activation_limit
                     </div>
                     <div className="text-gray-400 pl-8">
-                      self.current_mode = "idle"
+                      self.current_mode = &quot;idle&quot;
                     </div>
                     <div className="text-white mt-2">
                       def evaluate_task(self, workload_value):
@@ -404,14 +404,14 @@ export default function Services() {
                       if workload_value &gt; self.activation_limit:
                     </div>
                     <div className="text-gray-400 pl-8">
-                      self.current_mode = "engaged"
+                      self.current_mode = &quot;engaged&quot;
                     </div>
                     <div className="text-gray-400 pl-8">
-                      return "Automation agent activated!"
+                      return &quot;Automation agent activated!&quot;
                     </div>
                     <div className="text-white pl-4">else:</div>
                     <div className="text-white pl-8">
-                      return "Agent stays idle."
+                      return &quot;Agent stays idle.&quot;
                     </div>
                   </div>
 

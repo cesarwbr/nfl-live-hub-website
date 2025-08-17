@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React, { useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "motion/react";
 import NextImage from "next/image";
 
-export default function EmailConfirmationPage() {
+function EmailConfirmationContent() {
   const params = useSearchParams();
   const email = params.get("email") || "your email";
   const safeEmail = useMemo(() => email.slice(0, 254), [email]);
@@ -124,5 +124,13 @@ export default function EmailConfirmationPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function EmailConfirmationPage() {
+  return (
+    <Suspense fallback={null}>
+      <EmailConfirmationContent />
+    </Suspense>
   );
 }
