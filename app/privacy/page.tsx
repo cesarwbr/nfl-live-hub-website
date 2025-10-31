@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function PrivacyPage() {
-  const effectiveDate = "2025-08-07";
+  const effectiveDate = "2025-10-30";
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -82,24 +82,37 @@ export default function PrivacyPage() {
               </h2>
               <ul className="list-disc list-inside text-white/70 space-y-2">
                 <li>
-                  Product telemetry: anonymized, aggregated usage events to
-                  ensure features like live score updates and panel rendering
-                  work reliably.
+                  <span className="font-medium text-white/90">
+                    Product telemetry:
+                  </span>{" "}
+                  Anonymized, aggregated usage events to ensure features like
+                  live score updates and panel rendering work reliably.
                 </li>
                 <li>
-                  Session data: limited runtime session identifiers used to keep
-                  the extension working while your browser is open.
+                  <span className="font-medium text-white/90">
+                    Session data:
+                  </span>{" "}
+                  Limited runtime session identifiers used to keep the extension
+                  working while your browser is open.
                 </li>
                 <li>
-                  Optional account data: if you sign in, we process your email
-                  and preferences to sync favorite teams and notification
-                  settings across devices.
+                  <span className="font-medium text-white/90">
+                    Optional account data:
+                  </span>{" "}
+                  If you sign in, we collect and store:
+                  <ul className="list-circle ml-6 mt-2 space-y-1">
+                    <li>Email address (for account identification)</li>
+                    <li>Team preferences (your favorite NFL teams)</li>
+                    <li>
+                      Notification settings (which alerts you&apos;ve enabled)
+                    </li>
+                    <li>Community username (if you participate in fan chat)</li>
+                    <li>Account creation date</li>
+                  </ul>
                 </li>
               </ul>
               <p className="text-white/60 mt-3 text-sm">
-                We do not collect the contents of pages you visit unless you
-                explicitly interact with the extension (for example, opening the
-                side panel or using context menu actions).
+                We do not collect the contents of pages you visit.
               </p>
             </section>
 
@@ -131,7 +144,7 @@ export default function PrivacyPage() {
                   <p className="text-white/70">
                     Used to display alerts when games are about to start and to
                     deliver time‑sensitive updates you opt into. This directly
-                    supports the extension’s single purpose of keeping you
+                    supports the extension&apos;s single purpose of keeping you
                     informed.
                   </p>
                 </div>
@@ -172,28 +185,114 @@ export default function PrivacyPage() {
               </div>
             </section>
 
-            {/* Third-Party Services */}
+            {/* Third-Party Services - UPDATED */}
             <section>
               <h2 className="text-2xl font-semibold mb-3">
-                Third‑party services
+                Third‑party services and data sharing
               </h2>
-              <p className="text-white/70">
-                We use analytics to understand feature usage and improve
-                reliability. Any analytics we use is configured to avoid
-                collecting sensitive personal data or page content and focuses
-                on aggregated usage and performance metrics.
+              <p className="text-white/70 mb-4">
+                We share limited data with the following third parties to
+                provide our services:
               </p>
+              <div className="space-y-4">
+                <div className="border-l-2 border-white/20 pl-4">
+                  <h3 className="font-medium text-white/90">
+                    Analytics provider: Google Analytics
+                  </h3>
+                  <ul className="list-disc list-inside text-white/70 mt-2 space-y-1">
+                    <li>
+                      Data shared: Anonymized usage events, feature
+                      interactions, error logs
+                    </li>
+                    <li>
+                      Purpose: Performance monitoring and feature improvement
+                    </li>
+                    <li>
+                      Privacy policy:{" "}
+                      <a
+                        href="https://policies.google.com/privacy"
+                        className="text-white underline"
+                      >
+                        https://policies.google.com/privacy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="border-l-2 border-white/20 pl-4">
+                  <h3 className="font-medium text-white/90">
+                    Authentication service: Google Identity import
+                  </h3>
+                  <ul className="list-disc list-inside text-white/70 mt-2 space-y-1">
+                    <li>Data shared: Email address, authentication tokens</li>
+                    <li>Purpose: Account sign-in and cross-device sync</li>
+                    <li>
+                      Privacy policy:{" "}
+                      <a
+                        href="https://policies.google.com/privacy"
+                        className="text-white underline"
+                      >
+                        https://policies.google.com/privacy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-4 p-4 bg-white/5 rounded-lg">
+                <p className="font-medium text-white/90 mb-2">We do NOT:</p>
+                <ul className="list-disc list-inside text-white/70 space-y-1">
+                  <li>Sell your personal data to any third party</li>
+                  <li>Share your data with advertisers</li>
+                  <li>
+                    Allow third parties to use your data for their own purposes
+                  </li>
+                </ul>
+              </div>
             </section>
 
-            {/* Data Retention */}
+            {/* Data Storage - NEW SECTION */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-3">
+                Data storage and location
+              </h2>
+              <ul className="list-disc list-inside text-white/70 space-y-2">
+                <li>
+                  User data is stored on secure servers located in the United
+                  States (Supabase)
+                </li>
+                <li>
+                  Session data and preferences are stored locally in your
+                  browser using Chrome&s storage API
+                </li>
+                <li>
+                  Optional account data is stored on Supabase Storage (AWS S3)
+                </li>
+                <li>
+                  Data in transit is encrypted using industry-standard TLS/SSL
+                  protocols
+                </li>
+                <li>Data at rest is encrypted using AES-256 encryption</li>
+              </ul>
+            </section>
+
+            {/* Data Retention - UPDATED */}
             <section>
               <h2 className="text-2xl font-semibold mb-3">Data retention</h2>
-              <p className="text-white/70">
-                We retain data only as long as needed to provide the service and
-                for legitimate business purposes such as troubleshooting and
-                security. You can request deletion of your account data at any
-                time.
-              </p>
+              <ul className="list-disc list-inside text-white/70 space-y-2">
+                <li>Session data: Deleted when you close your browser</li>
+                <li>
+                  Usage analytics: Retained for 12 months, then automatically
+                  deleted
+                </li>
+                <li>
+                  Account preferences: Retained while your account is active
+                </li>
+                <li>Community chat messages: Retained for 90 days</li>
+                <li>
+                  Deleted account data: Permanently removed within 30 days of
+                  deletion request
+                </li>
+                <li>Backup data: Deleted within 90 days of account deletion</li>
+              </ul>
             </section>
 
             {/* Security */}
@@ -210,7 +309,7 @@ export default function PrivacyPage() {
             {/* Children */}
             <section>
               <h2 className="text-2xl font-semibold mb-3">
-                Children’s privacy
+                Children&apos;s privacy
               </h2>
               <p className="text-white/70">
                 NFL Live Hub is not intended for children under 13. We do not
@@ -218,17 +317,63 @@ export default function PrivacyPage() {
               </p>
             </section>
 
-            {/* Your Choices */}
+            {/* Your Choices - UPDATED */}
             <section>
               <h2 className="text-2xl font-semibold mb-3">
                 Your choices and controls
               </h2>
               <ul className="list-disc list-inside text-white/70 space-y-2">
                 <li>
-                  Adjust notification preferences in the extension settings
+                  <span className="font-medium text-white/90">
+                    Adjust notification preferences:
+                  </span>{" "}
+                  In the extension settings
                 </li>
-                <li>Sign out to stop syncing data across devices</li>
-                <li>Request data deletion by contacting us</li>
+                <li>
+                  <span className="font-medium text-white/90">Sign out:</span>{" "}
+                  To stop syncing data across devices
+                </li>
+                <li>
+                  <span className="font-medium text-white/90">
+                    Request data access:
+                  </span>{" "}
+                  Email{" "}
+                  <a
+                    href="mailto:contact@nfllivehub.com"
+                    className="text-white underline"
+                  >
+                    contact@nfllivehub.com
+                  </a>{" "}
+                  with &quot;Data Access Request&quot; in the subject line. We
+                  will provide your data within 30 days.
+                </li>
+                <li>
+                  <span className="font-medium text-white/90">
+                    Request data deletion:
+                  </span>{" "}
+                  Email{" "}
+                  <a
+                    href="mailto:contact@nfllivehub.com"
+                    className="text-white underline"
+                  >
+                    contact@nfllivehub.com
+                  </a>{" "}
+                  with &quot;Delete My Data&quot; in the subject line. We will
+                  delete your data within 30 days and confirm by email.
+                </li>
+                <li>
+                  <span className="font-medium text-white/90">
+                    Disable specific features:
+                  </span>{" "}
+                  You can disable notifications, chat, and other features in the
+                  extension settings menu
+                </li>
+                <li>
+                  <span className="font-medium text-white/90">
+                    Uninstall the extension:
+                  </span>{" "}
+                  Removes all locally stored data immediately
+                </li>
               </ul>
             </section>
 
