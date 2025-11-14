@@ -4,6 +4,7 @@ import FounderNote from "@/components/FounderNote";
 import Benefits from "@/components/Benefits";
 // import Services from "@/components/Services";
 import Features from "@/components/Features";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
@@ -53,6 +54,7 @@ export default function Home() {
         <Benefits />
         {/* <Services /> */}
         <Features />
+        <FAQ />
       </main>
       <Footer />
     </div>

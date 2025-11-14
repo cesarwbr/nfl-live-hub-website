@@ -38,9 +38,8 @@ export default function Hero() {
           muted
           playsInline
           preload="none"
-          poster="/logo.png"
           aria-label="Background video of abstract gradients"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-10"
         >
           <source src="/background.mp4" type="video/mp4" />
         </video>
