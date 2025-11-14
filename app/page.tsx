@@ -4,6 +4,8 @@ import FounderNote from "@/components/FounderNote";
 import Benefits from "@/components/Benefits";
 // import Services from "@/components/Services";
 import Features from "@/components/Features";
+import Comparison from "@/components/Comparison";
+import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
@@ -15,6 +17,18 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Header />
       <main>
+        <StructuredData
+          data={{
+            "@type": "Organization",
+            name: "NFL Live Hub",
+            url: "https://nfllivehub.com",
+            logo: "https://nfllivehub.com/logo.png",
+            founder: {
+              "@type": "Person",
+              name: "Cesar William",
+            },
+          }}
+        />
         <StructuredData
           data={{
             "@context": "https://schema.org",
@@ -41,11 +55,11 @@ export default function Home() {
             publisher: { "@type": "Organization", name: "NFL Live Hub" },
             aggregateRating: {
               "@type": "AggregateRating",
-              ratingValue: 4.1,
+              ratingValue: 4.3,
               bestRating: 5,
               worstRating: 1,
-              ratingCount: 7,
-              reviewCount: 7,
+              ratingCount: 9,
+              reviewCount: 5,
             },
           }}
         />
@@ -54,6 +68,8 @@ export default function Home() {
         <Benefits />
         {/* <Services /> */}
         <Features />
+        <Comparison />
+        <Reviews />
         <FAQ />
       </main>
       <Footer />
